@@ -21,6 +21,26 @@ nova setup
 nova
 ```
 
+### IDE Integration via ACP (Agent Client Protocol)
+
+Nova can be used as an AI agent server in IDEs that support the Agent Client Protocol (ACP), such as Zed and JetBrains IDEs.
+
+> **Important:** Run `nova setup` first to configure your API keys and preferences before integrating with any IDE.
+
+#### Zed IDE
+
+To configure Nova in Zed, open your settings file (`zed: open settings`) and add the following to your `settings.json`:
+
+```json
+"agent_servers": {
+  "Nova": {
+    "type": "custom",
+    "command": "npx",
+    "args": ["@compass-ai/nova@latest", "acp"]
+  }
+}
+```
+
 ---
 
 ## 🌟 The All-In-One AI Development Platform
