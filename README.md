@@ -275,6 +275,18 @@ Stay in flow with quick commands:
 
 ---
 
+![Approval System](assets/screenshots/nova-approval-system.png)
+
+*Granular control with approval system for plans, files, tools, etc*
+
+---
+
+![Commands](assets/screenshots/nova-commands-example.png)
+
+*Extensive, useful and customizable commands for the perfect experience*
+
+---
+
 </div>
 
 ---
