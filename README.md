@@ -13,6 +13,16 @@
 
 ---
 
+## ⚡ Quick Start
+
+```bash
+npm install -g @compass-ai/nova
+nova setup
+nova
+```
+
+---
+
 ## 🌟 The All-In-One AI Development Platform
 
 Nova is part of the **Compass Platform** ecosystem — a unified AI development solution:
@@ -32,14 +42,18 @@ Nova is part of the **Compass Platform** ecosystem — a unified AI development 
 
 Nova isn't just another AI coding tool. It's built from the ground up for developers who want **power without surrendering control**.
 
+**Stay in flow:** No browser tabs, no copy-pasting, no context switching. Describe what you need in plain English and Nova handles the rest — reading files, writing code, running commands, and managing git — all from your terminal.
+
 | Feature | Nova | Typical AI Assistants |
 |---------|------|----------------------|
 | **Multi-Platform** | CLI + Desktop + Web | CLI only |
-| **LLM Flexibility** | Anthropic + Ollama | Vendor-locked |
+| **LLM Flexibility** | Anthropic + Ollama + GLM | Vendor-locked |
+| **Context Window** | 200K tokens | Limited |
 | **Approval System** | 3-tier: Manual/Auto/Strict | All-or-nothing |
 | **Codebase Indexing** | Automatic semantic search | None or basic |
 | **Skills & Agents** | Full ecosystem support | Limited |
-| **Session Management** | Save/load/export sessions | Ephemeral |
+| **Session Management** | Save/load/export/compact | Ephemeral |
+| **Cost Tracking** | Real-time token & cost stats | None |
 | **Privacy** | Local-first, GDPR compliant | Cloud-dependent |
 
 ---
@@ -60,10 +74,13 @@ Connect Nova to the Compass Platform with a single API key:
 
 ### 🤖 Multi-Model Support
 
-**Choose your model based on:**
-- ⚡ **Speed** → Ollama (access to multiple agentic reasoning models)
-- 💪 **Power** → Anthropic Sonnet/Opus 4.5
-- 🧠 **Reasoning** → Anthropic Opus
+**Choose your model based on the task:**
+- ⚡ **Speed** → Claude Haiku 4.5 or Ollama for quick iterations
+- 💪 **Power** → Claude Sonnet 4.5 for balanced performance
+- 🧠 **Reasoning** → Claude Opus 4.5 for complex analysis
+- 🔧 **Alternatives** → GLM 4.7, Minimax, Kimi, Gemini
+
+Switch models mid-session with `/model` — no restart required.
 
 ### 🛠️ Skills & Agents Ecosystem
 
@@ -116,7 +133,7 @@ Spawn specialized agents for complex tasks:
 → Spawns refactoring specialist with auto-save checkpoints
 ```
 
-**Check out:** [Skills & Agents Repository](https://github.com/dherbe-digital/nova-skills-collection)
+**Check out:** [Awesome Skills & Agents Repository](https://github.com/dherbe-digital/nova-skills-collection)
 
 ### 🔒 Safety First with Three-Tier Approval
 
@@ -137,12 +154,19 @@ Spawn specialized agents for complex tasks:
 └─────────────────────────────────────────────────────────┘
 ```
 
+**Built-in safeguards:**
+- Automatic file backups before every modification
+- `/undo` command to rollback changes instantly
+- External modification detection prevents overwrites
+- Token usage limits to control costs
+
 ### 🧠 Deep Codebase Understanding
 
-Nova automatically indexes your project and understands:
+Nova automatically indexes your project with a **200K token context window** and understands:
 - File relationships and dependencies
 - Function calls and imports
 - Project structure and architecture
+- Semantic code patterns for intelligent search
 
 ```
 ❯ nova: "Find all files that handle user authentication"
@@ -155,7 +179,7 @@ Nova automatically indexes your project and understands:
 
 ### 💬 Natural Conversations
 
-Describe what you want in plain English. Nova handles the implementation.
+Describe what you want in plain English. Nova handles the implementation with 20+ built-in tools for file operations, shell commands, and git integration.
 
 ```
 ❯ "Refactor the authentication module to use JWT tokens"
@@ -165,6 +189,27 @@ Describe what you want in plain English. Nova handles the implementation.
 → Updates all dependent files
 → Preserves backward compatibility
 ```
+
+Your conversation history persists with auto-save, and you can export sessions as Markdown, JSON, or HTML for documentation.
+
+---
+
+## ⌨️ Slash Commands
+
+Stay in flow with quick commands:
+
+| Command | Description |
+|---------|-------------|
+| `/model` | Switch models on-the-fly (Opus, Sonnet, Haiku) |
+| `/commit` | Generate conventional commits from staged changes |
+| `/approve` | Toggle between Manual, Auto, and Strict modes |
+| `/undo` | Rollback the last file modification |
+| `/compact` | Summarize conversation to free up context |
+| `/export` | Save conversation as Markdown, JSON, or HTML |
+| `/tokens` | View current session token usage |
+| `/cost` | Display estimated API costs |
+| `/index` | Reindex project for semantic search |
+| `/agents` | Switch to specialized agents |
 
 ---
 
@@ -255,10 +300,7 @@ Describe what you want in plain English. Nova handles the implementation.
 
 - [npm Package](https://www.npmjs.com/package/@compass-ai/nova)
 - [Compass Platform](https://compassap.ai/)
-- [Documentation](docs/README.md)
-- [Report Issues](https://github.com/compass-ai/nova/issues)
-- [Ollama](https://ollama.com/)
-- [Anthropic](https://www.anthropic.com/)
+- [Report Issues](https://github.com/Compass-Agentic-Platform/nova/issues)
 
 ---
 
@@ -266,7 +308,7 @@ Describe what you want in plain English. Nova handles the implementation.
 
 **Ready to supercharge your development workflow?**
 
-[Get Compass Platform](https://compassap.ai/) → [Install Nova](https://www.npmjs.com/package/@compass-ai/nova) → [Read Documentation](docs/README.md)
+[Get Compass Platform](https://compassap.ai/) → [Install Nova](https://www.npmjs.com/package/@compass-ai/nova)
 
 </div>
 
