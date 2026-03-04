@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Compass Platform Support
+    url: https://compassap.ai/
+    about: For account, billing, or platform-level questions, please reach out via the Compass Platform.
+  - name: Nova Documentation
+    url: https://github.com/Compass-Agentic-Platform/nova#readme
+    about: Check the README for setup guides, slash commands, and usage examples before opening an issue.

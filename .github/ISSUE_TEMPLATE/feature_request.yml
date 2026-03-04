@@ -1,0 +1,109 @@
+name: Feature Request
+description: Have an idea that would make Nova better? We'd love to hear it.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape Nova! Great feature requests include a clear problem statement and a concrete use case.
+        Before submitting, please [search existing issues](https://github.com/Compass-Agentic-Platform/nova/issues) to see if this has already been suggested.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      description: Which part of Nova does this relate to?
+      options:
+        - "Core CLI / Terminal UX"
+        - "Slash Commands"
+        - "Skills & Agents Ecosystem"
+        - "Model Support (new model / provider)"
+        - "Approval System"
+        - "Session Management (save / load / export)"
+        - "Codebase Indexing & Search"
+        - "IDE Integration (ACP / Zed / JetBrains)"
+        - "Compass Platform Integration"
+        - "Cost & Token Tracking"
+        - "Performance"
+        - "Documentation"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: |
+        What problem are you trying to solve? Describe the friction or limitation you're experiencing.
+        A good format: "When I do X, I can't Y, which means I have to Z instead."
+      placeholder: "Currently, when I want to ... I have to ... which is frustrating because ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature or change you'd like to see. Be as specific as possible.
+      placeholder: "I'd like Nova to ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you tried any workarounds or alternative approaches? Why don't they fully solve the problem?
+    validations:
+      required: false
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case & Who Benefits
+      description: |
+        Describe a concrete scenario where this feature would be used.
+        Who would benefit — solo devs, teams, enterprise users, a specific workflow?
+      placeholder: "This would help developers who ... when they ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to you?
+      options:
+        - "Nice to have — would improve my workflow"
+        - "Important — I work around this regularly"
+        - "Critical — blocking my adoption of Nova"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: |
+        Anything else that would help — mockups, links to similar features in other tools, related issues, or technical notes.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would be willing to open a pull request to implement this feature
+          required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched existing issues and this has not been requested before
+          required: true

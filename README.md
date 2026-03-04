@@ -328,11 +328,20 @@ Stay in flow with quick commands:
 ---
 
 
+## 🤝 Contributing & Feedback
+
+Found a bug or have an idea? We use structured GitHub issue templates to keep things organised:
+
+- [Report a Bug](https://github.com/Compass-Agentic-Platform/nova/issues/new?template=bug_report.yml)
+- [Request a Feature](https://github.com/Compass-Agentic-Platform/nova/issues/new?template=feature_request.yml)
+
+---
+
 ## 🔗 Links
 
 - [npm Package](https://www.npmjs.com/package/@compass-ai/nova)
 - [Compass Platform](https://compassap.ai/)
-- [Report Issues](https://github.com/Compass-Agentic-Platform/nova/issues)
+- [All Issues](https://github.com/Compass-Agentic-Platform/nova/issues)
 
 ---
 

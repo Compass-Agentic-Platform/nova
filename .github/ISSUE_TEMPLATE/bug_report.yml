@@ -1,0 +1,150 @@
+name: Bug Report
+description: Something isn't working as expected? Let us know.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill in as much detail as possible — it helps us reproduce and fix the issue faster.
+        Before submitting, please [search existing issues](https://github.com/Compass-Agentic-Platform/nova/issues) to avoid duplicates.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How badly does this bug affect your workflow?
+      options:
+        - "Critical — Nova is unusable / data loss"
+        - "High — Major feature broken, no workaround"
+        - "Medium — Feature partially broken, workaround exists"
+        - "Low — Minor inconvenience or cosmetic issue"
+    validations:
+      required: true
+
+  - type: input
+    id: nova_version
+    attributes:
+      label: Nova Version
+      description: Run `nova --version` to find this.
+      placeholder: "e.g. 1.4.2"
+    validations:
+      required: true
+
+  - type: input
+    id: node_version
+    attributes:
+      label: Node.js Version
+      description: Run `node --version` to find this.
+      placeholder: "e.g. 20.11.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - macOS
+        - Linux
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: model
+    attributes:
+      label: Model in Use (if applicable)
+      description: Which model were you using when the bug occurred?
+      options:
+        - "Not applicable"
+        - "Claude Sonnet"
+        - "Claude Haiku"
+        - "Claude Opus"
+        - "Ollama (local)"
+        - "GLM / Minimax / Kimi / Gemini"
+        - "Other / Unknown"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: approval_mode
+    attributes:
+      label: Approval Mode (if applicable)
+      options:
+        - "Not applicable"
+        - "Manual (default)"
+        - "Auto"
+        - "Strict"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "When I run `nova ...`, it ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide a minimal, reliable set of steps to reproduce the issue.
+      placeholder: |
+        1. Run `nova` in a project directory
+        2. Type "..."
+        3. Observe the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behaviour
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behaviour
+      description: What actually happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Output
+      description: Paste any terminal output, stack traces, or error messages here. This will be formatted as code automatically.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: |
+        Any other relevant information — screenshots, links, related issues, or notes about your environment (IDE integration, Compass Platform usage, etc.).
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched existing issues and this is not a duplicate
+          required: true
+        - label: I can reliably reproduce this issue
+          required: false
+        - label: I have included all relevant logs and environment details
+          required: false
