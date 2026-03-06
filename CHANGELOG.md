@@ -1,6 +1,54 @@
-﻿# Nova Changelog
+# Nova Changelog
 
 What's new in Nova — your AI-powered development assistant.
+
+---
+
+## [v1.0.66] - 2026-03-06
+
+### Paste Command
+You can now use **/paste** to paste clipboard content directly into the conversation — text, code, or file contents, without leaving the terminal.
+
+### Safer MCP Tool Results
+Nova now sanitises binary content in MCP tool responses and enforces token limits, preventing oversized or malformed results from disrupting your session.
+
+### Stability and Performance
+- Fixed a session replay deadlock in ACP that could cause Nova to hang during reconnects.
+- Fixed an issue where not all prompt part types were handled correctly in ACP content.
+- Nova's startup is now faster — dependencies are lazy-loaded and initialisation steps run in parallel.
+
+---
+
+## [v1.0.65] - 2026-03-05
+
+### MCP Streamable HTTP (SSE)
+Nova now correctly parses **Server-Sent Events (SSE)** responses from MCP servers using the Streamable HTTP transport — improving compatibility with a wider range of MCP server implementations.
+
+### ACP Authentication Improvements
+- Auth error messages are now clearer and more actionable.
+- Auth method handling has been aligned with the ACP specification, with proper session gating.
+
+---
+
+## [v1.0.64] - 2026-03-05
+
+### Automatic Model Fallback
+If your current subscription plan does not support the selected model, Nova now automatically falls back to a compatible model — no interruption, no error, just a smooth handoff.
+
+### ACP: Unified Token Limits and Backpressure
+The ACP transport layer now enforces unified token limits and handles backpressure correctly. Plan cancellation via ACP is also now supported.
+
+### New Built-in Skill: Sanitize Memory
+A new **Sanitize Memory** skill is now built in — invoke it to clean up stale, redundant, or outdated entries from your project memory files, keeping context lean and accurate.
+
+### Reliability Fixes
+- Fixed an issue where aborting a task could leave child processes running. Nova now force-kills the full process tree on abort.
+- Fixed queued slash commands not executing correctly after an abort.
+- Improved plan mode stability and error handling.
+
+### UI Cleanup
+- Removed unused slash commands from the command palette.
+- Rewritten spinner component uses direct stdout writes for smoother, flicker-free rendering.
 
 ---
 
