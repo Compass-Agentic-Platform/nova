@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://www.compassap.ai/"><img src="assets/compass-ecosystem-banner.svg" alt="Explore the Compass ecosystem" width="100%" /></a>
+  <br />
+  <strong><a href="https://www.compassap.ai/">Compass Website</a> · <a href="https://www.compassap.ai/docs">Compass Documentation</a> · <a href="https://www.compassap.ai/academy">Compass Academy</a></strong>
+</p>
+
 # Nova - AI-Powered Development Assistant
 
 <div align="center">
